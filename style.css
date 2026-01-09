@@ -137,10 +137,14 @@ body {
 
 
 .card {
+    min-height: 60vh;
     background: rgba(15, 23, 42, 1);
     padding: 30px;
-    border-radius: 20px;
+    border-radius: 25px;
     box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    display: flex;
+    flex-direction: column;
+
 }
 
 .card h2 {
@@ -153,14 +157,67 @@ body {
 }
 
 .placeholder {
-    height: 120px;
+    width: 100%;
     border-radius: 12px;
-    border: 2px dashed #fb8500;
     display: flex;
+    flex: 1;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     color: #fb8500;
     font-weight: 600;
+    gap: 20px;
+}
+
+.item {
+    flex: 1;              /* każdy zajmuje tyle samo miejsca */
+    width: 100%;
+    display: flex;
+    align-items: center;      /* wyśrodkowanie pionowe treści */
+    padding-left: 16px;
+    color: #FB8500;
+    background: white;
+    cursor: pointer;
+    align-items: stretch;
+    margin: 0;                 /* usuwa marginesy */
+    padding: 0; 
+    overflow: hidden; 
+}
+
+/* kwadrat po lewej */
+.left-square {
+    flex-shrink: 0;            /* nie kurczy się */              /* wysokość = rodzic */
+    height: 100%;
+    aspect-ratio: 1 / 1;       /* kwadrat: szerokość = wysokość */
+    overflow: hidden;           /* obcina obraz */
+    background: #023047;
+}
+
+.left-square img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;        /* wypełnia cały kwadrat, zachowuje proporcje */
+    display: block;           /* usuwa whitespace pod obrazem */
+}
+
+/* reszta po prawej */
+.right-content {
+    flex: 1;                    /* zajmuje pozostałą szerokość */
+    display: flex;
+    justify-content: center;
+    flex-direction: column; 
+    height: 100%;          
+    background: #FB8500;
+}
+
+.right-content > div {
+    height: 30%;            
+    display: flex;            /* flex dla wyśrodkowania pionowego */
+    align-items: center;      /* wyśrodkowanie pionowe tekstu */
+    justify-content: flex-start; /* tekst do lewej */
+    margin-left: 15px;        /* margines od lewej */
+    color: white;
+    font-weight: 600;;
 }
 
 /* DAY HITS */
@@ -186,6 +243,7 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 80px 6%;
+    scroll-margin-top: 80px;
     gap: 40px;
 }
 
@@ -204,12 +262,19 @@ body {
   scroll-margin-top: 80px;
 }
 
+.about-me-image {
+    display: flex;
+    justify-content: center; /* poziomo */
+    align-items: center;     /* pionowo */
+}
+
 /* Zdjęcie */
 .about-me-image img {
   width: 100%;
   max-width: 320px;
   border-radius: 160px;
   box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  margin: auto;
 }
 
 /* Tekst */
@@ -325,6 +390,33 @@ body {
 
 .hero-content {
     animation: fadeInUp 1s ease-out;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 0.5rem;
+  height: 4rem;
+  margin-bottom: 2rem;
+}
+
+.bar {
+  width: 0.5rem;
+  border-radius: 0.25rem;
+  background: linear-gradient(to top, #ffb703, #023047);
+  animation: bounce 1s ease-in-out infinite;
+}
+
+.bar-1 { height: 50%; animation-delay: 0s; }
+.bar-2 { height: 75%; animation-delay: 0.1s; }
+.bar-3 { height: 100%; animation-delay: 0.2s; }
+.bar-4 { height: 85%; animation-delay: 0.2s; }
+.bar-5 { height: 45%; animation-delay: 0.3s; }
+
+@keyframes bounce {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.5); }
 }
 
 @keyframes fadeInUp {
