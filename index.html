@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Spotify Dashboard | Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="logo"><span>My</span>Music<span>App</span></div>
+        <ul class="nav-links">
+            <li><a href="#my-music">Twoje MyMusic</a></li>
+            <li><a href="#day-hits">Przeboje Dnia</a></li>
+            <li><a href="#hot-playlists">Gorące Playlisty</a></li>
+            <li><a href="#about-me">O Mnie</a></li>
+        </ul>
+        <button class="login-btn">Zaloguj się</button>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Największe hity w jednym miejscu</h1>
+            <p>Muzyczna baza wiedzy i podsumowanie statystyk</p>
+            <button id="primary-btn">Rozpocznij</button>
+            <button id="scrollTopBtn">Do góry ⬆</button>
+        </div>
+    </section>
+
+    <!-- CONTENT -->
+    <main>
+        <div id="my-music" class="my-music-section">
+            <section class="card">
+                <h2>🎧 Twoje Top Utwory</h2>
+                <p>W tej sekcji zostaną wyświetlone najczęściej słuchane utwory użytkownika.</p>
+                <div class="placeholder">Dane z Spotify API</div>
+            </section>
+
+            <section class="card">
+                <h2>📀 Playlisty</h2>
+                <p>Lista playlist pobrana dynamicznie z konta Spotify.</p>
+                <div class="placeholder">Dane z Spotify API</div>
+            </section>
+
+            <section class="card">
+                <h2>📊 Statystyki</h2>
+                <p>Analiza preferencji muzycznych użytkownika.</p>
+                <div class="placeholder">Wykresy / dane</div>
+            </section>
+        </div>
+
+        <div id="day-hits" class="day-hits-section">
+            <section class="card">
+                <h2>🎧 Twoje Top Utwory</h2>
+                <p>W tej sekcji zostaną wyświetlone najczęściej słuchane utwory użytkownika.</p>
+                <div class="placeholder">Dane z Spotify API</div>
+            </section>
+
+            <section class="card">
+                <h2>📀 Playlisty</h2>
+                <p>Lista playlist pobrana dynamicznie z konta Spotify.</p>
+                <div class="placeholder">Dane z Spotify API</div>
+            </section>
+
+           
+        </div>
+
+        <div id="hot-playlists" class="hot-playlists-section">
+            <section class="card">
+                <h2>🎧 Twoje Top Utwory</h2>
+                <p>W tej sekcji zostaną wyświetlone najczęściej słuchane utwory użytkownika.</p>
+                <div class="placeholder">Dane z Spotify API</div>
+            </section>
+
+            <section class="card">
+                <h2>📀 Playlisty</h2>
+                <p>Lista playlist pobrana dynamicznie z konta Spotify.</p>
+                <div class="placeholder">Dane z Spotify API</div>
+            </section>
+
+            <section class="card">
+                <h2>📊 Statystyki</h2>
+                <p>Analiza preferencji muzycznych użytkownika.</p>
+                <div class="placeholder">Wykresy / dane</div>
+            </section>
+        </div>
+
+        <div id="about-me" class="about-me-section">
+            <div class="about-me-image">
+                <img src="images/contact.jpg" alt="Moje zdjęcie">
+             </div>
+
+            <div class="about-me-content">
+                <h2>O mnie</h2>
+
+                <p>
+                    Cześć! Jestem studentem Inżynierii i Analizy Danych. 
+                    Tworzę projekty, które łączą wiedzę z zakresu Analizy Danych, Systemów Bazodanowych, Backendu oraz Rozwiązań Chmurowych. W wolnych chwilach interesuję się spotem i gotowaniem. Ciągle pracuję nad nowymi projektami i staram się poszerzać swoje umiejętności i zainteresowania w IT.
+                    <br>
+                    Status - Focusing.
+                </p>
+
+                <div class="education">
+                    <h3>Wykształcenie</h3>
+                    <p>🎓 Inżynieria i Analiza Danych – Politechnika Lubelska</p>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://github.com/tgolecki04" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/tgolecki04" target="_blank">GitHub</a>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-container">
+
+            <div class="footer-column">
+                <h3>MyMusicApp</h3>
+                <p>
+                    Projekt stworzony w celu nauki i utrwalenia dotychczasowej wiedzy z zakresu projektowania dynamicznych stron internetowych oraz użycia API.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <h4>Technologie</h4>
+                <ul>
+                    <li>HTML5 / CSS3</li>
+                    <li>JavaScript</li>
+                    <li>REST API</li>
+                    <li>MySQL</li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h4>Kontakt ze mną!</h4>
+                <ul class="footer-links">
+                    <li><a href="#">GitHub</a></li>
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="mailto:email@example.com">tgolecki04@gmail.com</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2026 MyMusicApp | Projekt CV | Tomasz Golecki</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
