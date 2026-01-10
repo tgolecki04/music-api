@@ -41,7 +41,7 @@ document.querySelector('.login-btn').addEventListener('click', () => {
 /* TOKEN */
 const hash = window.location.hash.substring(1); // usuwa #
 const params = new URLSearchParams(hash);
-const token = params.get('access_token');
+const token1 = params.get('access_token');
 
 if(token){
     console.log('Token:', token);
@@ -63,3 +63,18 @@ if(token){
         document.body.appendChild(ul);
     });
 }
+
+const token = '1POdFZRZbvb...qqillRxMr2z';
+const artistId = '7CJgLPEqiIRuneZSolpawQ';
+const url = `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=PL`;
+
+fetch(url, {
+  headers: {
+    Authorization: `Bearer ${token}`
+  }
+})
+.then(res => res.json())
+.then(data => {
+  console.log(data.tracks); // tablica top utworów
+})
+.catch(err => console.error(err));
