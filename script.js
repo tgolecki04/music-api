@@ -38,43 +38,31 @@ document.querySelector('.login-btn').addEventListener('click', () => {
     window.location = authURL; // przekierowanie do logowania Spotify
 });
 
-/* TOKEN */
-const hash = window.location.hash.substring(1); // usuwa #
-const params = new URLSearchParams(hash);
-const token1 = params.get('access_token');
 
-if(token){
-    console.log('Token:', token);
-    // teraz możesz wywołać Spotify API
-}
 
-if(token){
-    fetch('https://api.spotify.com/v1/me/top/artists?limit=10', {
-        headers: { Authorization: 'Bearer ' + token }
-    })
-    .then(res => res.json())
-    .then(data => {
-        const ul = document.createElement('ul');
-        data.items.forEach(artist => {
-            const li = document.createElement('li');
-            li.textContent = artist.name;
-            ul.appendChild(li);
-        });
-        document.body.appendChild(ul);
+
+/* APi */
+const API_KEY = "42caaf7e397a776303915827361a9121";
+const USERNAME = "Golden_2004";
+
+fetch(`https://ws.audioscrobbler.com/2.0/?method=user.gettopartists&user=${USERNAME}&api_key=${API_KEY}&format=json&limit=8&period=overall`)
+  .then(res => res.json())
+  .then(data => {
+    const list = document.getElementById("artists");
+
+    if (!data.topartists) {
+      list.innerHTML = "<li>Brak danych z Last.fm</li>";
+      return;
+    }
+
+    data.topartists.artist.forEach((artist, index) => {
+      const li = document.createElement("li");
+      li.textContent = `${index + 1}. ${artist.name}`;
+      list.appendChild(li);
     });
-}
-
-const token = '1POdFZRZbvb...qqillRxMr2z';
-const artistId = '7CJgLPEqiIRuneZSolpawQ';
-const url = `https://api.spotify.com/v1/artists/${artistId}/top-tracks?market=PL`;
-
-fetch(url, {
-  headers: {
-    Authorization: `Bearer ${token}`
-  }
-})
-.then(res => res.json())
-.then(data => {
-  console.log(data.tracks); // tablica top utworów
-})
-.catch(err => console.error(err));
+  })
+  .catch(err => {
+    document.getElementById("artists").innerHTML =
+      "<li>Błąd ładowania danych</li>";
+    console.error(err);
+  });
