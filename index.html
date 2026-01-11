@@ -43,7 +43,7 @@
     <!-- CONTENT -->
     <main>
         <div id="my-music" class="my-music-section">
-            <section class="card">
+            <section class="card" id="my_top_tracks">
                 <h2>🎵 Top Utwory</h2>
                 <div class="placeholder">
                     <div class="item">
@@ -76,7 +76,7 @@
                 </div>
             </section>
 
-            <section class="card">
+            <section class="card" id="my_top_playlists">
                 <h2>📀 Top Playlisty</h2>
                 <div class="placeholder">
                     <div class="item">
@@ -109,8 +109,8 @@
                 </div>
             </section>
 
-            <section class="card">
-                <h2>⌚ Ostatnio Odtwarzane</h2>
+            <section class="card" id="my_last_tracks">
+                <h2>⌚ Ostatnie utwory</h2>
                 <div class="placeholder">
                     <div class="item">
                         <div class="left-square">
@@ -144,8 +144,8 @@
         </div>
 
         <div id="day-hits" class="day-hits-section">
-            <section class="card">
-                <h2>🎧 Najczęściej słuchane dzisiaj</h2>
+            <section class="card" id="top_today">
+                <h2>🎧 Najpopularniejsi artyści w Polsce</h2>
                 <div class="placeholder">
                     <div class="item">
                         <div class="left-square">
@@ -177,7 +177,7 @@
                 </div>
             </section>
 
-            <section class="card">
+            <section class="card" id="popular_today">
                 <h2>📻 Popularne na głośnikach</h2>
                 <div class="placeholder">
                     <div class="item">
@@ -214,41 +214,8 @@
         </div>
 
         <div id="hot-playlists" class="hot-playlists-section">
-            <section class="card">
-                <h2>🏠 Polska</h2>
-                <div class="placeholder">
-                    <div class="item">
-                        <div class="left-square">
-                            <img src="images/random2.png">
-                        </div>
-                        <div class="right-content">
-                            <div class="song-title">Tytuł piosenki</div>
-                            <div class="song-artist">Artysta</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="left-square">
-                            <img src="images/random3.png">
-                        </div>
-                        <div class="right-content">
-                            <div class="song-title">Tytuł piosenki</div>
-                            <div class="song-artist">Artysta</div>
-                        </div>
-                    </div>
-                    <div class="item">
-                        <div class="left-square">
-                            <img src="images/random1.png">
-                        </div>
-                        <div class="right-content">
-                            <div class="song-title">Tytuł piosenki</div>
-                            <div class="song-artist">Artysta</div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="card">
-                <h2>🌆 Europa</h2>
+            <section class="card" id="usa">
+                <h2>🌉 USA </h2>
                 <div class="placeholder">
                     <div class="item">
                         <div class="left-square">
@@ -280,8 +247,42 @@
                 </div>
             </section>
 
-            <section class="card">
-                <h2>🌍 Świat</h2>
+
+            <section class="card" id="spain">
+                <h2>🌆 Hiszpania</h2>
+                <div class="placeholder">
+                    <div class="item">
+                        <div class="left-square">
+                            <img src="images/random3.png">
+                        </div>
+                        <div class="right-content">
+                            <div class="song-title">Tytuł piosenki</div>
+                            <div class="song-artist">Artysta</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="left-square">
+                            <img src="images/random1.png">
+                        </div>
+                        <div class="right-content">
+                            <div class="song-title">Tytuł piosenki</div>
+                            <div class="song-artist">Artysta</div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="left-square">
+                            <img src="images/random2.png">
+                        </div>
+                        <div class="right-content">
+                            <div class="song-title">Tytuł piosenki</div>
+                            <div class="song-artist">Artysta</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="card" id="japan">
+                <h2>🌍 Japonia</h2>
                 <div class="placeholder">
                     <div class="item">
                         <div class="left-square">
@@ -315,11 +316,6 @@
         </div>
 
         <div id="about-me" class="about-me-section">
-              <!-- API -->
-            <div id="info-box">
-                <h2>🎧 Moje Top 5 Artystów (Last.fm)</h2>
-                <ul id="artists"></ul>
-            </div>
             <div class="about-me-image">
                 <img src="images/contact.jpg" alt="Moje zdjęcie">
              </div>

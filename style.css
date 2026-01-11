@@ -137,7 +137,6 @@ body {
 
 
 .card {
-    max-height: 60vh;
     background: rgba(15, 23, 42, 1);
     padding: 40px;
     border-radius: 25px;
@@ -159,27 +158,23 @@ body {
 
 .placeholder {
     width: 100%;
-    max-height: 350px;
     border-radius: 12px;
     display: flex;
     flex: 1;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     font-weight: 600;
     gap: 20px;
 }
 
 .item {
-    flex: 1;              /* każdy zajmuje tyle samo miejsca */
     width: 100%;
     display: flex;
     align-items: center;      /* wyśrodkowanie pionowe treści */
-    padding-left: 16px;
-    color: #FB8500;
+    color: linear-gradient(180deg, #fb8500, #023047);
     background: white;
     cursor: pointer;
-    align-items: stretch;
+    min-height: 90px; 
     margin: 0;                 /* usuwa marginesy */
     padding: 0; 
     overflow: hidden; 
@@ -187,7 +182,8 @@ body {
 
 .left-square {
     flex-shrink: 0;            /* nie kurczy się */              /* wysokość = rodzic */
-    height: 100%;
+    width: 90px;
+    height: 90px;
     aspect-ratio: 1 / 1;       /* kwadrat: szerokość = wysokość */
     overflow: hidden;           /* obcina obraz */
     background: #023047;
@@ -207,7 +203,7 @@ body {
     justify-content: center;
     flex-direction: column; 
     height: 100%;          
-    background: #FFB703;
+    background: linear-gradient(135deg, #fb8500, #023047);
 }
 
 .right-content > div {
@@ -218,6 +214,18 @@ body {
     margin-left: 15px;        /* margines od lewej */
     color: white;
     font-weight: 600;;
+}
+
+.song-title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: white;
+}
+
+.song-artist {
+    font-size: 0.85rem;
+    opacity: 0.9;
+    color: white;
 }
 
 /* DAY HITS */
@@ -487,5 +495,31 @@ body {
 @media (max-width: 480px) {
     .hero-content h1 {
         font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 1200px) {
+    .left-square {
+        width: 75px;
+        height: 75px;
+    }
+}
+
+@media (max-width: 768px) {
+    .item {
+        min-height: 70px;
+    }
+
+    .left-square {
+        width: 65px;
+        height: 65px;
+    }
+
+    .song-title {
+        font-size: 0.9rem;
+    }
+
+    .song-artist {
+        font-size: 0.75rem;
     }
 }
